@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hydra Wrapper</title>
+  <style>
+    html, body { margin: 0; overflow: hidden; background: black; }
+    iframe { width: 100vw; height: 100vh; border: 0; }
+  </style>
+</head>
+<body>
+  <iframe id="hydra" src="http://localhost:5173/?showCode=false&code=JTJGJTJG" allow="autoplay"></iframe>
+
+  <script>
+    const ws = new WebSocket("ws://localhost:3000");
+
+    ws.onopen = () => console.log("✅ WS connected");
+    ws.onerror = e => console.error("❌ WS error:", e);
+    ws.onclose = () => console.log("⚠️ WS closed");
+
+    ws.onmessage = e => {
+      console.log("📩 Message received:", e.data);
+      const hydraWin = document.getElementById("hydra").contentWindow;
+      try {
+        hydraWin.eval(e.data);
+      } catch(err) {
+        console.error("❌ Failed at execution Hydra code:", err);
+      }
+    };
+  </script>
+</body>
+</html>

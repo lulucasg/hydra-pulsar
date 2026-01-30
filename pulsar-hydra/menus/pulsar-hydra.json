@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle pulsar-hydra",
+        "command": "pulsar-hydra:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "pulsar-hydra",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "pulsar-hydra:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

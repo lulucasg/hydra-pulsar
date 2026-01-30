@@ -1,0 +1,16 @@
+{
+  "name": "pulsar-hydra",
+  "version": "1.0.0",
+  "description": "Enviar código a Hydra desde Pulsar via WebSocket",
+  "main": "./lib/pulsar-hydra",
+  "keywords": ["hydra", "pulsar", "ws", "visuals"],
+  "activationCommands": {
+    "atom-workspace": "pulsar-hydra:toggle"
+  },
+  "repository": "",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "dependencies": {}
+}

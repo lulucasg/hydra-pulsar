@@ -1,0 +1,7 @@
+{
+  "atom-workspace atom-text-editor[data-grammar~='js'], atom-workspace atom-text-editor[data-grammar~='hydra']": {
+    "ctrl-enter": "pulsar-hydra:send-block",
+    "shift-enter": "pulsar-hydra:send-selection",
+    "ctrl-alt-h": "pulsar-hydra:toggle"
+  }
+}
